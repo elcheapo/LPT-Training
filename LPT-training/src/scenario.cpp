@@ -7,9 +7,8 @@
 
 #include <avr/pgmspace.h>
 #include "scenario.h"
-#include "actions.h"
 
-scenario::scenario(void (*_init)(uint8_t &), uint32_t (*_action)(uint8_t &)) {
+scenario::scenario(void (*_init)(void), uint32_t (*_action)(uint8_t &)) {
 	enabled = false;
 	delay_time = 0;
 	cycle = 0;
@@ -21,17 +20,18 @@ scenario::~scenario() {
 	// TODO Auto-generated destructor stub
 }
 
-void scenario::enable(uint8_t &cycle) {
+void scenario::enable(void) {
 	enabled = true;
 	cycle = 1;
 }
 
-void scenario::disable(uint8_t &cycle) {
+void scenario::disable(void) {
 	enabled = false;
-	init(cycle);
+	cycle = 0;
+	init();
 }
 
-void scenario::run(uint8_t &cycle) {
+void scenario::run() {
 	if (!enabled) return;
 	if (delay_time != 0) {
 		if (millis() < delay_time)
