@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="LPT-training" />
+		<Option makefile_is_custom="1" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<MakeCommands>
+			<Build command="/home/francois/.local/bin/platformio -f -c codeblocks run" />
+			<CompileFile command="/home/francois/.local/bin/platformio -f -c codeblocks run" />
+			<Clean command="/home/francois/.local/bin/platformio -f -c codeblocks run -t clean" />
+			<DistClean command="/home/francois/.local/bin/platformio -f -c codeblocks run -t clean" />
+			<AskRebuildNeeded command="1" />
+			<SilentBuild command="/home/francois/.local/bin/platformio -f -c codeblocks run &gt; $(CMD_NULL)" />
+		</MakeCommands>
+		<Build>
+			<Target title="Debug">
+				<Option type="4" />
+				<Option compiler="gcc" />
+				<Option parameters="-f -c codeblocks run -t upload" />
+				<Option host_application="/home/francois/.local/bin/platformio" />
+				<Option run_host_application_in_terminal="1" />
+				<MakeCommands>
+					<Build command="/home/francois/.local/bin/platformio -f -c codeblocks run" />
+					<CompileFile command="/home/francois/.local/bin/platformio -f -c codeblocks run" />
+					<Clean command="/home/francois/.local/bin/platformio -f -c codeblocks run -t clean" />
+					<DistClean command="/home/francois/.local/bin/platformio -f -c codeblocks run -t clean" />
+					<AskRebuildNeeded command="1" />
+					<SilentBuild command="/home/francois/.local/bin/platformio -f -c codeblocks run &gt; $(CMD_NULL)" />
+				</MakeCommands>
+			</Target>
+			<Target title="Release">
+				<Option type="4" />
+				<Option compiler="gcc" />
+				<Option parameters="-f -c codeblocks run -t upload" />
+				<Option host_application="/home/francois/.local/bin/platformio" />
+				<Option run_host_application_in_terminal="1" />
+				<MakeCommands>
+					<Build command="/home/francois/.local/bin/platformio -f -c codeblocks run" />
+					<CompileFile command="/home/francois/.local/bin/platformio -f -c codeblocks run" />
+					<Clean command="/home/francois/.local/bin/platformio -f -c codeblocks run -t clean" />
+					<DistClean command="/home/francois/.local/bin/platformio -f -c codeblocks run -t clean" />
+					<AskRebuildNeeded command="1" />
+					<SilentBuild command="/home/francois/.local/bin/platformio -f -c codeblocks run &gt; $(CMD_NULL)" />
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-DPLATFORMIO=40100" />
+			<Add option="-DARDUINO_AVR_UNO" />
+			<Add option="-DF_CPU=16000000L" />
+			<Add option="-DARDUINO_ARCH_AVR" />
+			<Add option="-DARDUINO=10808" />
+			<Add option="-D__AVR_ATmega328P__" />
+			<Add directory="/home/francois/git/repository/LPT-training/LPT-training/include" />
+			<Add directory="/home/francois/git/repository/LPT-training/LPT-training/src" />
+			<Add directory="/home/francois/git/repository/LPT-training/LPT-training/lib/FastLED" />
+			<Add directory="/home/francois/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src" />
+			<Add directory="/home/francois/git/repository/LPT-training/LPT-training/lib/Io_port/src" />
+			<Add directory="/home/francois/git/repository/LPT-training/LPT-training/lib/ssd1306/src" />
+			<Add directory="/home/francois/.platformio/packages/framework-arduino-avr/libraries/Wire/src" />
+			<Add directory="/home/francois/.platformio/packages/framework-arduino-avr/libraries/SPI/src" />
+			<Add directory="/home/francois/.platformio/packages/framework-arduino-avr/cores/arduino" />
+			<Add directory="/home/francois/.platformio/packages/framework-arduino-avr/variants/standard" />
+			<Add directory="/home/francois/.platformio/packages/framework-arduino-avr/libraries/EEPROM/src" />
+			<Add directory="/home/francois/.platformio/packages/framework-arduino-avr/libraries/HID/src" />
+			<Add directory="/home/francois/.platformio/packages/toolchain-atmelavr/avr/include" />
+			<Add directory="/home/francois/.platformio/packages/toolchain-atmelavr/lib/gcc/avr/5.4.0/include" />
+			<Add directory="/home/francois/.platformio/packages/toolchain-atmelavr/lib/gcc/avr/5.4.0/include-fixed" />
+			<Add directory="/home/francois/.platformio/packages/tool-unity" />
+		</Compiler>
+		<Unit filename="platformio.ini" />
+		<Unit filename="src/LPT-training.ino" />
+		<Unit filename="src/helpers.h" />
+		<Unit filename="src/scenario.cpp" />
+		<Unit filename="src/scenario.h" />
+		<Extensions />
+	</Project>
+</CodeBlocks_project_file>
